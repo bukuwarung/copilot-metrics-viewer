@@ -201,7 +201,7 @@ docker build -t copilot-metrics-viewer .
 ### Docker Run
 
 ```bash
-docker run -p 8080:80 --env-file ./.env copilot-metrics-viewer
+docker run --restart=always -d -p 8080:80 --env-file ./.env copilot-metrics-viewer
 ```
 
 The application will be accessible at http://localhost:8080
